@@ -1,29 +1,27 @@
+
+
+
 const cityForm = document.querySelector('form');
 const card = document.querySelector('.card');
 const details = document.querySelector('.details');
 const time = document.querySelector('.time');
 const icon = document.querySelector('.icon img');
 const bg = document.querySelector('.wcontainer');
+const forecast = new Forecast();
 
-const updateCity = async (city)=>{
-    // updateCity(city)
-    const cityDets = await getCity(city);
-    const weather = await getWeather(cityDets.Key);
-    return {
-        'cityDets':cityDets,
-        'weather':weather
-    };
-}
+
 cityForm.addEventListener("submit",(e)=>{
     e.preventDefault();
     const city = cityForm.city.value.trim();
     cityForm.reset();
-    updateCity(city).then(data=>updateUI(data))
+    forecast.updateCity(city).then(data=>updateUI(data))
     .catch(err=>console.log(err));
 
     
 });
 
+
+// updating the ui with weather info
 const updateUI = (data)=>{
     const {cityDets, weather} = data;
 

@@ -1,0 +1,84 @@
+@font-face{
+    font-family: "Monofett";
+    src: url("Monofett-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face{
+    font-family: "Montserrat";
+    src: url("Montserrat-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-display: swap;
+}
+
+
+
+body{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #8576DE;
+    text-align: left;
+    overflow-x: hidden;
+    margin: 0;
+    display:flex;
+    justify-content: center;
+}
+
+.h1-over {
+    font-family: "Monofett", sans-serif;
+    font-weight: 400;
+    font-size: 150px;
+    color:#3D26CB;
+}
+
+.wcontainer{
+    margin: 0 auto;
+    background: url(../images/sunny.svg) repeat center;
+    text-align: center;
+    width: 100%;
+    animation: cloud 50s linear infinite;
+}
+
+@keyframes cloud{
+    0%{background-position:0 0;}
+    100%{background-position:-2122px 0;}
+}
+
+.glass{
+    background-color: white;
+    width:50%;
+    margin: 0 auto;
+    padding: 50px;
+    max-width: 1000px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(70px);
+    border-radius: 40px;
+}
+
+.form-control{
+    display:block;
+    width:60%;
+    height:50px;
+    border-radius: 20px;
+    border-color:white;
+    margin: 20px auto;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    color:#8576DE;
+}
+
+.results{
+    color:#8576DE;
+}
+
+.icon{
+    position: relative;
+    border-radius: 50%;
+    top:-50px;
+    width: 100px;
+    margin-bottom: -50px;
+}

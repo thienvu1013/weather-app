@@ -3,6 +3,7 @@ const card = document.querySelector('.card');
 const details = document.querySelector('.details');
 const time = document.querySelector('.time');
 const icon = document.querySelector('.icon img');
+const bg = document.querySelector('.wcontainer');
 
 const updateCity = async (city)=>{
     // updateCity(city)
@@ -38,6 +39,11 @@ const updateUI = (data)=>{
 
     weather.IsDayTime? timeSrc='images/sunny.svg': timeSrc='images/night.svg';
     time.setAttribute("src", timeSrc);
+
+    weather.IsDayTime? bg.style.backgroundImage = "url('images/sunny.svg')": bg.style.backgroundImage = "url('images/night.svg')";
+    time.setAttribute("src", timeSrc);
+
+
 
     const iconSrc = `images/icons/${weather.WeatherIcon}.svg`;
     icon.setAttribute("src",iconSrc);
